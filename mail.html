@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>メールでのご相談｜老人ホーム引越センター福岡</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@900&family=Noto+Sans+JP:wght@400;700&display=swap">
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#FAF7F1;color:#1F2A27;font-family:'Noto Sans JP',system-ui,sans-serif;line-height:1.7}
+.wrap{max-width:520px;margin:0 auto;padding:40px 16px}
+h1{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:26px;margin:0 0 8px}
+p{margin:0 0 16px;color:#3B4743}
+.card{background:#fff;border:1px solid #E7E1D6;border-radius:20px;padding:24px;text-align:center}
+.addr{font-size:22px;font-weight:700;margin:4px 0 18px;word-break:break-all}
+.btn{display:flex;align-items:center;justify-content:center;gap:10px;min-height:56px;border-radius:999px;font:inherit;font-size:17px;font-weight:700;text-decoration:none;border:0;width:100%;cursor:pointer}
+.primary{background:#1E5A47;color:#fff}
+.ghost{background:#fff;color:#1E5A47;border:2px solid #1E5A47;margin-top:12px}
+.msg{min-height:1.5em;font-size:14px;color:#1E5A47;font-weight:700;margin-top:8px}
+.foot{text-align:center;font-size:14px;margin-top:24px}
+.foot a{color:#1E5A47}
+</style>
+</head>
+<body>
+<main class="wrap">
+<h1>メールでのご相談</h1>
+<p>下のボタンを押すとメールアプリが開きます。入居先・時期・お荷物の量などをお書きください。</p>
+<div class="card">
+<div>送り先</div>
+<div class="addr">info@hwinfo.jp</div>
+<a class="btn primary" id="mail" href="mailto:info@hwinfo.jp?subject=%E3%81%8A%E5%BC%95%E8%B6%8A%E3%81%97%E3%81%AE%E3%81%94%E7%9B%B8%E8%AB%87">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg>
+メールアプリで作成する</a>
+<button class="btn ghost" id="copy" type="button">アドレスをコピーする</button>
+<div class="msg" id="msg" role="status"></div>
+</div>
+<div class="foot">お電話でも：<a href="tel:08036196004">080-3619-6004</a><br><a href="./">老人ホーム引越センター福岡 トップへ</a></div>
+</main>
+<script>
+document.getElementById('copy').addEventListener('click',function(){
+  var m=document.getElementById('msg');
+  try{
+    navigator.clipboard.writeText('info@hwinfo.jp').then(function(){m.textContent='コピーしました。メールアプリの宛先に貼り付けてください。';},function(){m.textContent='コピーできませんでした。アドレスを長押ししてコピーしてください。';});
+  }catch(e){m.textContent='アドレスを長押ししてコピーしてください。';}
+});
+</script>
+</body>
+</html>
