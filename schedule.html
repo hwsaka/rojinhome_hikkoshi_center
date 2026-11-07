@@ -116,6 +116,11 @@ LINEで送る
   var t=new Date(); t.setDate(t.getDate()+1);
   var min=t.getFullYear()+'-'+pad(t.getMonth()+1)+'-'+pad(t.getDate());
   ['d1','d2','d3'].forEach(function(id){document.getElementById(id).min=min});
+  var KIND={nyukyo:'施設への入居',taikyo:'施設からの退去',seikyo:'ご逝去に伴う退去'};
+  try{
+    var k=KIND[new URLSearchParams(location.search).get('kind')];
+    if(k){ var r=document.querySelector('input[name=kind][value="'+k+'"]'); if(r) r.checked=true; }
+  }catch(e){}
   function fmt(v){
     if(!v) return '';
     var p=v.split('-'); var d=new Date(+p[0],+p[1]-1,+p[2]);
